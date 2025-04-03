@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoExchange</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5dc;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #8B4513;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        section {
+            padding: 20px;
+            display: none;
+        }
+        .cta {
+            background-color: #DC143C;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .active {
+            display: block;
+        }
+        .centered-img {
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+    <script>
+        function showSection(sectionId) {
+            document.querySelectorAll('section').forEach(section => {
+                section.classList.remove('active');
+            });
+            let targetSection = document.getElementById(sectionId);
+            if (targetSection) {
+                targetSection.classList.add('active');
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>EcoExchange - Let’s Grow Together!</h1>
+    </header>
+    <nav>
+        <a onclick="showSection('about')">About Us</a>
+        <a onclick="showSection('our-action')">Our Action</a>
+        <a onclick="showSection('shrink-workshop')">Shrink Workshop</a>
+        <a onclick="showSection('green-station')">Green Counting Station</a>
+        <a onclick="showSection('contact')">Contact</a>
+        <a onclick="showSection('membership')">Membership</a>
+    </nav>
+    <section id="about" class="active">
+        <h2>About Us</h2>
+        <p>EcoExchange aims to reduce plastic waste through recycling awareness, collection systems, and creative workshops.</p>
+    </section>
+    <section id="our-action">
+        <h2>Our Action</h2>
+        <p>We organize events and campaigns to promote plastic waste reduction.</p>
+    </section>
+    <section id="shrink-workshop">
+        <h2>Shrink Workshop</h2>
+        <p>Join our workshop to learn creative ways to recycle plastic waste.</p>
+    </section>
+    <section id="green-station">
+        <h2>Green Counting Station</h2>
+        <div class="centered-img">
+            <img src="image.png" alt="Green Counting Station" width="80%">
+        </div>
+    </section>
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Get in touch with us via email or social media.</p>
+    </section>
+    <section id="membership">
+        <h2>Membership</h2>
+        <p><a href="signup.html">Sign Up</a> | <a href="login.html">Log In</a></p>
+    </section>
+    <div class="cta">
+        <p>Join us in making a difference - Bring your bottles & earn rewards!</p>
+    </div>
+</body>
+</html>
